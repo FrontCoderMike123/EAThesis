@@ -92,11 +92,13 @@ EA.controller('developerCTRL',['$scope','$http',function($scope,$http){
   $scope.meLG = "img/me.jpg";
   $scope.responsive = "img/tools/responsive.png";
   $scope.lists = [
-    { "plan":"Plan" },
-    { "plan":"Research" },
-    { "plan":"Front End Developer" },
-    { "plan":"Back End Developer" },
-    { "plan":"Google Maps / Places API" },
-    { "plan":"Create Registration & Login" }
+    { "num":"1","plan":"Plan & Design" },
+    { "num":"2","plan":"Research & More Research" },
+    { "num":"3","plan":"Front End Code" },
+    { "num":"4","plan":"Back End Code" },
+    { "num":"5","plan":"Google Maps / Places API" },
+    { "num":"6","plan":"Create Registration & Login" },
+    { "num":"7","plan":"Test & Promote App" },
+    { "num":"8","plan":"Have The Perfect App" }
   ];
 }]);

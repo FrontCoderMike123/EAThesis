@@ -8,20 +8,26 @@
 		<div class="item item-divider">
 			<h3>Developer</h3>
 		</div>
-		<div class="item item-avatar" id="developerTop">
+		  <div class="item item-avatar" id="developerTop">
    			<img data-ng-src="{{meTH}}" alt="Michel Beaubien">
     		<h2>Michel Beaubien</h2>
     		<p>Front End Developer</p>
   		</div>
-  		<div class="item item-body">
-  			<img data-ng-src="{{meLG}}" alt="Michel Beaubien">
-  			<ul>
-  				<li data-ng-repeat="list in lists">
-  					{{list.plan}}
-  				</li>
-  			</ul>
+
+  		<div class="item item-body row responsive-md" id="devHolder">
+  			<div class="col col-25">
+          <img data-ng-src="{{meLG}}" alt="Michel Beaubien">
+        </div>
+        <div class="col col-75">
+          <ul>
+            <li data-ng-repeat="list in lists" class="col col-50">
+              <p><span class="NUM">{{list.num}}</span> {{list.plan}}</p>
+            </li>
+          </ul>
+        </div>
   		</div>
-  		<div class="item item-divider item-text-wrap">
+
+  		<div class="item item-divider item-text-wrap" id="responsiveText">
   			<p>EASY EATS is a responsive website. From mobile to desktop, no matter where you may be, Easy Eats will always be at your finger tips.</p>
   			<img data-ng-src="{{responsive}}" alt="Responsive Design">
   		</div>
