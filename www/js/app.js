@@ -1,20 +1,9 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+var EA = angular.module('EASY', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
-      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-      // for form inputs)
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-      // Don't remove this line unless you know what you are doing. It stops the viewport
-      // from snapping when text inputs are focused. Ionic handles this internally for
-      // a much nicer keyboard experience.
       cordova.plugins.Keyboard.disableScroll(true);
     }
     if(window.StatusBar) {
@@ -22,3 +11,92 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+
+EA.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+
+  $urlRouterProvider.otherwise('/');
+
+  $stateProvider.state('home',{
+    url: '/',
+    views: {
+      home: {
+        templateUrl: 'views/home.html',
+        controller: 'homeCTRL'
+      }
+    }
+  });
+
+  $stateProvider.state('tech',{
+    url: '/tech',
+    views: {
+      tech: {
+        templateUrl: 'views/tech.html',
+        controller: 'techCTRL'
+      }
+    }
+  });
+
+  $stateProvider.state('features',{
+    url: '/features',
+    views: {
+      features: {
+        templateUrl: 'views/features.html',
+        controller: 'featuresCTRL'
+      }
+    }
+  });
+
+  $stateProvider.state('developer',{
+    url: '/developer',
+    views: {
+      developer: {
+        templateUrl: 'views/developer.html',
+        controller: 'developerCTRL'
+      }
+    }
+  });
+
+}]);
+
+
+//CONTROLLERS
+
+
+EA.controller('homeCTRL',['$scope','$http',function($scope,$http){
+  $scope.logo = "img/logo.png";
+}]);
+
+EA.controller('techCTRL',['$scope','$http',function($scope,$http){
+  $scope.logo = "img/logo.png";
+}]);
+
+EA.controller('featuresCTRL',['$scope','$http',function($scope,$http){
+  $scope.logo = "img/logo.png";
+  $http.get('features.json').success(function(data){
+    $scope.features = data.Features;
+  });
+
+  $scope.Imgs = [
+    { "image":"img/features/feat1.png" },
+    { "image":"img/features/feat2.png" },
+    { "image":"img/features/feat3.png" },
+    { "image":"img/features/feat4.png" },
+    { "image":"img/features/feat5.png" }
+  ];
+}]);
+
+EA.controller('developerCTRL',['$scope','$http',function($scope,$http){
+  $scope.logo = "img/logo.png";
+  $scope.meTH = "img/meTH.jpg";
+  $scope.meLG = "img/me.jpg";
+  $scope.responsive = "img/tools/responsive.png";
+  $scope.lists = [
+    { "plan":"Plan" },
+    { "plan":"Research" },
+    { "plan":"Front End Developer" },
+    { "plan":"Back End Developer" },
+    { "plan":"Google Maps / Places API" },
+    { "plan":"Create Registration & Login" }
+  ];
+}]);

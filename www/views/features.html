@@ -1,0 +1,38 @@
+<ion-header-bar class="header">
+	<h1 class="title"><img data-ng-src="{{logo}}" alt="Logo"></h1>
+</ion-header-bar>
+
+<ion-content>
+	
+	<div class="card">
+		<div class="item item-divider">
+			<h3>Features</h3>
+		</div>
+	</div>
+
+	<div class="row responsive-md">
+	<div class="list card col" data-ng-repeat="feature in features">
+		<div class="item thumbnail-left">
+			<object data-ng-data="{{feature.SVG}}">
+				<img data-ng-src="{{feature.PNG}}">
+			</object>
+			<h2>{{feature.Title}}</h2>
+		</div>
+
+		<div class="item item-body">
+			<ul>
+				<li>{{feature.List[0]}}</li>
+				<li>{{feature.List[1]}}</li>
+				<li>{{feature.List[2]}}</li>
+			</ul>
+		</div>
+	</div>
+	</div><!--row-->
+
+	<div class="row responsive-sm">
+	<div class="list card col" data-ng-repeat="Img in Imgs">
+		<img class="full-image" data-ng-src="{{Img.image}}" alt="Features">
+	</div>	
+	</div><!--row-->
+
+</ion-content>

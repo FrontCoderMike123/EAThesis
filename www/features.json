@@ -1,0 +1,21 @@
+{
+	"Features":
+	[{
+		"Title":"Budget",
+		"SVG":"img/features/money.svg",
+		"PNG":"img/features/money.png",
+		"List":["Enter Money","Wait for Results","Eat Where You CAN Eat"]
+	},
+	{
+		"Title":"Geolocation",
+		"SVG":"img/features/location.svg",
+		"PNG":"img/features/location.png",
+		"List":["Find Your Position","Use Position to Find Restaurants","Decide Where You WANT to Go"]
+	},
+	{
+		"Title":"Favorites",
+		"SVG":"img/features/favs.svg",
+		"PNG":"img/features/favs.png",
+		"List":["Craving Something Different?","Easy Eats Will Fine Tune Results","Enjoy the Food YOU Want"]
+	}]
+}

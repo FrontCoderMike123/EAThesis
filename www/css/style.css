@@ -1,1 +1,53 @@
-/* Empty. Add your own CSS if you like */
+body
+{
+	text-align: center;
+	cursor: url('../img/custumCursor.png'), auto;
+}
+
+.header img
+{
+  width:50px;
+  margin-top: 5px;
+}
+
+.header
+{
+	background-color: #006699;
+}
+
+object
+{
+	pointer-events: none;
+}
+
+.tabs
+{
+	background-color: #006699;
+}
+
+.tab-item
+{
+	color: #fff;
+}
+
+.tab-item.tab-item-active, .tab-item.active, .tab-item.activated {
+    color: #ffcc00;
+}
+
+#tools object
+{
+	width: 50px;
+}
+
+.card
+{
+	margin: 0!important;
+}
+
+
+
+
+#developerTop p,#developerTop h2
+{
+	text-align: left;
+}

@@ -1,0 +1,30 @@
+<ion-header-bar class="header">
+	<h1 class="title"><img data-ng-src="{{logo}}" alt="Logo"></h1>
+</ion-header-bar>
+
+<ion-content>
+	
+	<div class="list card">
+		<div class="item item-divider">
+			<h3>Developer</h3>
+		</div>
+		<div class="item item-avatar" id="developerTop">
+   			<img data-ng-src="{{meTH}}" alt="Michel Beaubien">
+    		<h2>Michel Beaubien</h2>
+    		<p>Front End Developer</p>
+  		</div>
+  		<div class="item item-body">
+  			<img data-ng-src="{{meLG}}" alt="Michel Beaubien">
+  			<ul>
+  				<li data-ng-repeat="list in lists">
+  					{{list.plan}}
+  				</li>
+  			</ul>
+  		</div>
+  		<div class="item item-divider item-text-wrap">
+  			<p>EASY EATS is a responsive website. From mobile to desktop, no matter where you may be, Easy Eats will always be at your finger tips.</p>
+  			<img data-ng-src="{{responsive}}" alt="Responsive Design">
+  		</div>
+	</div>
+
+</ion-content>
