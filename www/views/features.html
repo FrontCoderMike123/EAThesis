@@ -10,6 +10,7 @@
 		</div>
 	</div>
 
+<!--
 	<div class="row responsive-md" id="features">
 	<div class="list card col" data-ng-repeat="feature in features">
 		<div class="item thumbnail-left">
@@ -27,7 +28,53 @@
 			</ul>
 		</div>
 	</div>
-	</div><!--row-->
+	</div>
+-->
+
+	<ion-slide-box on-slide-changed="slideHasChanged($index)" id="features">
+  		<ion-slide>
+    		<div class="box">
+    			<object data="img/features/money.svg">
+					<img data-ng-src="img/features/money.png" alt="Wallet">
+				</object>
+				<h2>Budget</h2>
+				<ul>
+					<li>Enter Money</li>
+					<li>Wait for Results</li>
+					<li>Eat Where You CAN Eat</li>
+				</ul>
+    		</div>
+    	</ion-slide>
+
+    	<ion-slide>
+    		<div class="box">
+    			<object data="img/features/location.svg">
+					<img data-ng-src="img/features/location.png" alt="Geolocation">
+				</object>
+				<h2>Geolocation</h2>
+				<ul>
+					<li>Find Your Position</li>
+					<li>Use Position to Find Restaurants</li>
+					<li>Decide Where You WANT to Go</li>
+				</ul>
+    		</div>
+    	</ion-slide>
+
+    	<ion-slide>
+    		<div class="box">
+    			<object data="img/features/favs.svg">
+					<img data-ng-src="img/features/favs.png" alt="Favorites">
+				</object>
+				<h2>Favorites</h2>
+				<ul>
+					<li>Craving Something Different?</li>
+					<li>Easy Eats Will Fine Tune Results</li>
+					<li>Enjoy the Food YOU Want</li>
+				</ul>
+    		</div>
+    	</ion-slide>
+
+	</ion-slide-box>
 
 	<div class="card">
 		<div class="item item-divider">
@@ -35,10 +82,44 @@
 		</div>
 	</div>
 
+	<ion-slide-box on-slide-changed="slideHasChanged($index)" id="screenShots">
+	<ion-slide>
+		<div class="box">
+			<img src="img/features/feat1.png" alt="Welcome">
+		</div>
+	</ion-slide>
+
+	<ion-slide>
+		<div class="box">
+			<img src="img/features/feat2.png" alt="Sign Up">
+		</div>
+	</ion-slide>
+
+	<ion-slide>
+		<div class="box">
+			<img src="img/features/feat3.png" alt="Login">
+		</div>
+	</ion-slide>
+
+	<ion-slide>
+		<div class="box">
+			<img src="img/features/feat4.png" alt="Food Finder">
+		</div>
+	</ion-slide>
+
+	<ion-slide>
+		<div class="box">
+			<img src="img/features/feat5.png" alt="Restaurants">
+		</div>
+	</ion-slide>
+	</ion-slide-box>
+
+<!--
 	<div class="row responsive-sm">
 	<div class="list card col" data-ng-repeat="Img in Imgs">
 		<img class="full-image" data-ng-src="{{Img.image}}" alt="Features">
 	</div>	
-	</div><!--row-->
+	</div>
+-->
 
 </ion-content>

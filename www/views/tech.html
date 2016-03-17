@@ -16,101 +16,70 @@
 				<h3>Tools</h3>
 			</div>
 
-			<div class="item button-bar row responsive-sm" id="tools">
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 1">
-					<object data="img/tools/html5.svg">
-						<img src="img/tools/html5.png" alt="HTML5">
-					</object>
-					<p class="mobile">HTML5</p>
-				</a>
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 2">
-					<object data="img/tools/css.svg">
-						<img src="img/tools/css.png" alt="CSS3">
-					</object>
-					<p class="mobile">CSS3</p>
-				</a>
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 3">
-					<object data="img/tools/javascript.svg">
-						<img src="img/tools/javascript.png" alt="JAVASCRIPT">
-					</object>
-					<p class="mobile">JAVASCRIPT</p>
-				</a>
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 4">
-					<object data="img/tools/mongo.svg">
-						<img src="img/tools/mongo.png" alt="MongoDB">
-					</object>
-					<p class="mobile">MongoDB</p>
-				</a>
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 5">
-					<object data="img/tools/express.svg">
-						<img src="img/tools/express.png" alt="ExpressJS">
-					</object>
-					<p class="mobile">ExpressJS</p>
-				</a>
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 6">
-					<object data="img/tools/angular.svg">
-						<img src="img/tools/angular.png" alt="AngularJS">
-					</object>
-					<p class="mobile">AngularJS</p>
-				</a>
-				<a href="#" class="button thumbnail-left col" ng-click="toshow = 7">
-					<object data="img/tools/node.svg">
-						<img src="img/tools/node.png" alt="NodeJS">
-					</object>
-					<p class="mobile">NodeJS</p>
-				</a>
-			</div>
+			<ion-slide-box on-slide-changed="slideHasChanged($index)" id="tools">
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/html5.svg">
+							<img src="img/tools/html5.png" alt="html5">
+						</object>
+						<p>HTML5 is used for the "Structure" of the house. This is used the build the outside of the app, the frame.</p>
+					</div>
+				</ion-slide>
 
-			<div class="item">
-				<div ng-show="toshow == 1" class="item item-text-wrap">
-					<object data="img/tools/html5.svg">
-						<img src="img/tools/html5.png" alt="html5">
-					</object>
-					<p>HTML5 is used for the "Structure" of the house. This is used the build the outside of the app, the frame.</p>
-				</div>
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/style.svg">
+							<img src="img/tools/style.png" alt="css">
+						</object>
+						<p>CSS3 is used to "Design" the house. The inside and outs of Easy Eats. The colors, style, template etc.</p>
+					</div>
+				</ion-slide>
 
-				<div ng-show="toshow == 2" class="item item-text-wrap">
-					<object data="img/tools/css.svg">
-						<img src="img/tools/css.png" alt="css">
-					</object>
-					<p>CSS3 is used to "Design" the house. The inside and outs of Easy Eats. The colors, style, template etc.</p>
-				</div>
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/JS.svg">
+							<img src="img/tools/JS.png" alt="javascript">
+						</object>
+						<p>Javascript is used for the "Plumbing" of the house. Flic a light switch, on comes the power. You register a user, users created.</p>
+					</div>
+				</ion-slide>
 
-				<div ng-show="toshow == 3" class="item item-text-wrap">
-					<object data="img/tools/javascript.svg">
-						<img src="img/tools/javascript.png" alt="javascript">
-					</object>
-					<p>Javascript is used for the "Plumbing" of the house. Flic a light switch, on comes the power. You register a user, users created.</p>
-				</div>
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/mongo.svg">
+							<img src="img/tools/mongo.png" alt="mongo">
+						</object>
+						<p>MongoDB is where the users information is stored. This allows the application to apply a login / register form and hold information.</p>
+					</div>
+				</ion-slide>
 
-				<div ng-show="toshow == 4" class="item item-text-wrap">
-					<object data="img/tools/mongo.svg">
-						<img src="img/tools/mongo.png" alt="mongo">
-					</object>
-					<p>MongoDB is where the users information is stored. This allows the application to apply a login / register form and hold information.</p>
-				</div>
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/express.svg">
+							<img src="img/tools/express.png" alt="express">
+						</object>
+						<p>ExpressJS is used to carry "Variables" over easily from function to function. This allows for personal "Shout Outs" to the user.</p>
+					</div>
+				</ion-slide>
 
-				<div ng-show="toshow == 5" class="item item-text-wrap">
-					<object data="img/tools/express.svg">
-						<img src="img/tools/express.png" alt="express">
-					</object>
-					<p>ExpressJS is used to carry "Variables" over easily from function to function. This allows for personal "Shout Outs" to the user.</p>
-				</div>
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/angular.svg">
+							<img src="img/tools/angular.png" alt="angular">
+						</object>
+						<p>AngularJS is used to "Loop" through content with ease. Read JSON files and extract the needed information.</p>
+					</div>
+				</ion-slide>
 
-				<div ng-show="toshow == 6" class="item item-text-wrap">
-					<object data="img/tools/angular.svg">
-						<img src="img/tools/angular.png" alt="angular">
-					</object>
-					<p>AngularJS is used to "Loop" through content with ease. Read JSON files and extract the needed information.</p>
-				</div>
-
-				<div ng-show="toshow == 7" class="item item-text-wrap">
-					<object data="img/tools/node.svg">
-						<img src="img/tools/node.png" alt="node">
-					</object>
-					<p>NodeJS is the "Back-Bone" of the opperation. Everything is compiled in NodeJs, routes, views, partials etc.</p>
-				</div>
-			</div>
+				<ion-slide>
+					<div class="box">
+						<object data="img/tools/node.svg">
+							<img src="img/tools/node.png" alt="node">
+						</object>
+						<p>NodeJS is the "Back-Bone" of the opperation. Everything is compiled in NodeJs, routes, views, partials etc.</p>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
 		</div>
 
 </ion-content>
