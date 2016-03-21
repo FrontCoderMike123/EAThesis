@@ -15,18 +15,21 @@
   		</div>
 
   		<div class="item item-body row responsive-md" id="devHolder">
+
           <img id="myImg" data-ng-src="{{meLG}}" alt="Michel Beaubien">
+
           <ion-slide-box on-slide-changed="slideHasChanged($index)" id="myList">
           <ion-slide data-ng-repeat="list in lists">
             <div class="box item-text-wrap">
               <span class="NUM">{{list.num}}</span>
-                <object data-ng-data="{{list.SVG}}">
+                <object data="{{list.SVG}}">
                   <img data-ng-src="{{list.PNG}}" alt="List Item">
                 </object>
               <p>{{list.plan}}</p>
             </div>
           </ion-slide>
           </ion-slide-box>
+
   		</div>
 
   		<div class="item item-divider item-text-wrap" id="responsiveText">

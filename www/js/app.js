@@ -77,27 +77,36 @@ EA.controller('homeCTRL',['$scope','$http',function($scope,$http){
   $scope.logo = "img/logo.png";
 }]);
 
-EA.controller('techCTRL',['$scope','$http',function($scope,$http){
+EA.controller('techCTRL',['$scope','$http','$ionicSlideBoxDelegate',function($scope,$http,$ionicSlideBoxDelegate){
   $scope.logo = "img/logo.png";
+  $http.get('techs.json').success(function(data){
+    $scope.techs = data.Techs;
+    $ionicSlideBoxDelegate.update();
+  });
 }]);
 
-EA.controller('featuresCTRL',['$scope','$http',function($scope,$http){
+EA.controller('featuresCTRL',['$scope','$http','$ionicSlideBoxDelegate',function($scope,$http,$ionicSlideBoxDelegate){
   $scope.logo = "img/logo.png";
   $http.get('features.json').success(function(data){
     $scope.features = data.Features;
+    $ionicSlideBoxDelegate.update();
   });
-
-  $scope.Imgs = [
-    { "image":"img/features/feat1.png" },
-    { "image":"img/features/feat2.png" },
-    { "image":"img/features/feat3.png" },
-    { "image":"img/features/feat4.png" },
-    { "image":"img/features/feat5.png" }
-  ];
 }]);
 
 EA.controller('tourCTRL',['$scope','$http',function($scope,$http){
   $scope.logo = "img/logo.png";
+
+  $scope.Imgs = [
+    { "image":"img/tour/1SM.png" },
+    { "image":"img/tour/2SM.png" },
+    { "image":"img/tour/3SM.png" },
+    { "image":"img/tour/4SM.png" },
+    { "image":"img/tour/5SM.png" },
+    { "image":"img/tour/6SM.png" },
+    { "image":"img/tour/7SM.png" },
+    { "image":"img/tour/8SM.png" },
+    { "image":"img/tour/9SM.png" }
+  ];
 }]);
 
 EA.controller('developerCTRL',['$scope','$http',function($scope,$http){

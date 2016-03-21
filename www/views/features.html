@@ -11,44 +11,14 @@
 	</div>
 
 	<ion-slide-box on-slide-changed="slideHasChanged($index)" id="features">
-  		<ion-slide>
+  		<ion-slide data-ng-repeat="feature in features">
     		<div class="box">
-    			<object data="img/features/money.svg">
-					<img data-ng-src="img/features/money.png" alt="Wallet">
+    			<object data="{{feature.SVG}}">
+					<img data-ng-src="{{feature.PNG}}" alt="{{feature.Title}}">
 				</object>
-				<h2>Budget</h2>
+				<h2>{{feature.Title}}</h2>
 				<ul>
-					<li>Enter Money</li>
-					<li>Wait for Results</li>
-					<li>Eat Where You CAN Eat</li>
-				</ul>
-    		</div>
-    	</ion-slide>
-
-    	<ion-slide>
-    		<div class="box">
-    			<object data="img/features/location.svg">
-					<img data-ng-src="img/features/location.png" alt="Geolocation">
-				</object>
-				<h2>Geolocation</h2>
-				<ul>
-					<li>Find Your Position</li>
-					<li>Use Position to Find Restaurants</li>
-					<li>Decide Where You WANT to Go</li>
-				</ul>
-    		</div>
-    	</ion-slide>
-
-    	<ion-slide>
-    		<div class="box">
-    			<object data="img/features/favs.svg">
-					<img data-ng-src="img/features/favs.png" alt="Favorites">
-				</object>
-				<h2>Favorites</h2>
-				<ul>
-					<li>Craving Something Different?</li>
-					<li>Easy Eats Will Fine Tune Results</li>
-					<li>Enjoy the Food YOU Want</li>
+					<li ng-repeat="list in feature.List">{{list}}</li>
 				</ul>
     		</div>
     	</ion-slide>

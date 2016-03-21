@@ -11,33 +11,9 @@
 	</div>
 
 	<ion-slide-box on-slide-changed="slideHasChanged($index)" id="screenShots">
-	<ion-slide>
+	<ion-slide data-ng-repeat="img in Imgs">
 		<div class="box">
-			<img src="img/features/feat1.png" alt="Welcome">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat2.png" alt="Sign Up">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat3.png" alt="Login">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat4.png" alt="Food Finder">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat5.png" alt="Restaurants">
+			<img data-ng-src="{{img.image}}" alt="Welcome">
 		</div>
 	</ion-slide>
 	</ion-slide-box>
