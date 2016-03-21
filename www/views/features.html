@@ -10,27 +10,6 @@
 		</div>
 	</div>
 
-<!--
-	<div class="row responsive-md" id="features">
-	<div class="list card col" data-ng-repeat="feature in features">
-		<div class="item thumbnail-left">
-			<object data-ng-data="{{feature.SVG}}">
-				<img data-ng-src="{{feature.PNG}}">
-			</object>
-			<h2>{{feature.Title}}</h2>
-		</div>
-
-		<div class="item item-body">
-			<ul>
-				<li>{{feature.List[0]}}</li>
-				<li>{{feature.List[1]}}</li>
-				<li>{{feature.List[2]}}</li>
-			</ul>
-		</div>
-	</div>
-	</div>
--->
-
 	<ion-slide-box on-slide-changed="slideHasChanged($index)" id="features">
   		<ion-slide>
     		<div class="box">
@@ -75,51 +54,5 @@
     	</ion-slide>
 
 	</ion-slide-box>
-
-	<div class="card">
-		<div class="item item-divider">
-			<h3>Screen Shots</h3>
-		</div>
-	</div>
-
-	<ion-slide-box on-slide-changed="slideHasChanged($index)" id="screenShots">
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat1.png" alt="Welcome">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat2.png" alt="Sign Up">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat3.png" alt="Login">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat4.png" alt="Food Finder">
-		</div>
-	</ion-slide>
-
-	<ion-slide>
-		<div class="box">
-			<img src="img/features/feat5.png" alt="Restaurants">
-		</div>
-	</ion-slide>
-	</ion-slide-box>
-
-<!--
-	<div class="row responsive-sm">
-	<div class="list card col" data-ng-repeat="Img in Imgs">
-		<img class="full-image" data-ng-src="{{Img.image}}" alt="Features">
-	</div>	
-	</div>
--->
 
 </ion-content>

@@ -47,6 +47,16 @@ EA.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRou
     }
   });
 
+  $stateProvider.state('tour',{
+    url: '/tour',
+    views: {
+      tour: {
+        templateUrl: 'views/tour.html',
+        controller: 'tourCTRL'
+      }
+    }
+  });
+
   $stateProvider.state('developer',{
     url: '/developer',
     views: {
@@ -86,19 +96,23 @@ EA.controller('featuresCTRL',['$scope','$http',function($scope,$http){
   ];
 }]);
 
+EA.controller('tourCTRL',['$scope','$http',function($scope,$http){
+  $scope.logo = "img/logo.png";
+}]);
+
 EA.controller('developerCTRL',['$scope','$http',function($scope,$http){
   $scope.logo = "img/logo.png";
   $scope.meTH = "img/meTH.jpg";
   $scope.meLG = "img/me.jpg";
-  $scope.responsive = "img/tools/responsive.png";
+  $scope.responsive = "img/used/responsive.png";
   $scope.lists = [
-    { "num":"1","plan":"Plan & Design" },
-    { "num":"2","plan":"Research & More Research" },
-    { "num":"3","plan":"Front End Code" },
-    { "num":"4","plan":"Back End Code" },
-    { "num":"5","plan":"Google Maps / Places API" },
-    { "num":"6","plan":"Create Registration & Login" },
-    { "num":"7","plan":"Test & Promote App" },
-    { "num":"8","plan":"Have The Perfect App" }
+    { "num":"1","plan":"Plan & Design","SVG":"img/list/plan.svg","PNG":"img/list/plan.png" },
+    { "num":"2","plan":"Research & More Research","SVG":"img/list/research.svg","PNG":"img/list/research.png" },
+    { "num":"3","plan":"Front End Code","SVG":"img/list/frontEnd.svg","PNG":"img/list/frontEnd.png" },
+    { "num":"4","plan":"Back End Code","SVG":"img/list/backEnd.svg","PNG":"img/list/backEnd.png" },
+    { "num":"5","plan":"Google Maps / Places API","SVG":"img/list/maps.svg","PNG":"img/list/maps.png" },
+    { "num":"6","plan":"Create Registration & Login","SVG":"img/list/login.svg","PNG":"img/list/login.png" },
+    { "num":"7","plan":"Test & Promote App","SVG":"img/list/promote.svg","PNG":"img/list/promote.png" },
+    { "num":"8","plan":"Have The Perfect App","SVG":"img/list/perfect.svg","PNG":"img/list/perfect.png" }
   ];
 }]);

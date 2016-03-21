@@ -3,31 +3,43 @@
 </ion-header-bar>
 
 <ion-content>
-		
-	<div class="row responsive-md">
-		<div class="card" id="homeCard">
-			<div class="item item-divider item-icon-left">
+
+<ion-slide-box on-slide-changed="slideHasChanged($index)" id="homeCard">
+	<ion-slide class="card">
+		<div class="box">
+			<div class="item item-divider item-icon-right">
 				<h3>What is Easy Eats?</h3>
 				<i class="icon ion-information"></i>
 			</div>
 			<div class="item item-text-wrap">
-				<p>Easy Eats is a food finding app, where I take your entered budget along with your location &amp; I give you results of restaurants in your area. Those restaurants will match your budget and ONLY show you food in which you can afford.</p>
+				<p>Easy Eats is a food finding app. It takes your entered budget along with your location &amp; it returns to you results of restaurants in your area. Those restaurants will match your budget and <span class="bold">ONLY</span> show you food in which you can afford.</p>
 			</div>
-			<div class="item item-divider item-icon-left">
+		</div>
+	</ion-slide>
+
+	<ion-slide class="card">
+		<div class="box">
+			<div class="item item-divider item-icon-right">
 				<h3>How It Works?</h3>
 				<i class="icon ion-help"></i>
 			</div>
 			<div class="item item-text-wrap">
-				<p>Example: If you've entered $10.00, Easy Eats will only show you results where you CAN afford to eat. It's quick, &amp; it's personal. Easy Eats has a 'Cravings' option where you can choose to filter your searches with finer results. You're hungry for a sub, Easy Eats will show you where to get a delicious sub.</p>
+				<p><span class="bold EX">Example</span> If you've entered $10.00, Easy Eats will only show you results of where you <span class="bold">CAN</span> afford to eat. It's quick, &amp; it's personal. Easy Eats has a 'Cravings' option where you can choose to filter your searches with finer results. You're craving some Italian food? Let Easy Eats know!</p>
 			</div>
-			<div class="item item-divider item-icon-left">
-				<h3>Where To Find Easy Eats?</h3>
+		</div>
+	</ion-slide>
+
+	<ion-slide class="card">
+		<div class="box">
+			<div class="item item-divider item-icon-right">
+				<h3>Where To Find It?</h3>
 				<i class="icon ion-android-search"></i>
 			</div>
 			<div class="item item-text-wrap">
-				<p>Easy Eats is a responsive website. From mobile to desktop, no matter where you may be, Easy Eats will always be at your finger tips.</p>
+				<p>Easy Eats is a responsive website. No matter which device you are using, from mobile phones to tablets, Easy Eats will <span class="bold">ALWAYS</span> be at your fingertips, and be there for you when you are feeling hungry.</p>
 			</div>
 		</div>
-	</div>
+	</ion-slide>
+</ion-slide-box>
 
 </ion-content>

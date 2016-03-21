@@ -65,9 +65,10 @@ img
 	margin: 0!important;
 }
 
-.card h1,.card h2,.card h3,.card h4,.card h5,.card h6
+h1,h2,h3,h4,h5,h6
 {
 	color: #006699;
+	font-size: 1.2em!important;
 }
 
 #developerTop p,#developerTop h2
@@ -81,6 +82,11 @@ img
 	display: block;
 	margin: auto;
 	font-size: 1em;
+}
+
+#homeCard h3
+{
+	margin: 0;
 }
 
 .ion-information,.ion-help,.ion-android-search
@@ -99,14 +105,14 @@ img
 	font-size: 1.5em;
 }
 
+#devHolder div
+{
+	margin: 0;
+}
+
 #devHolder ul li
 {
 	text-align: left;
-}
-
-#devHolder div
-{
-	background: rgba(0,102,153,.9);
 }
 
 #devHolder img
@@ -114,40 +120,27 @@ img
 	border-radius: 5px;
 }
 
+#myImg
+{
+	border: 2px solid #006699;
+	display: none;
+}
+
 #devHolder p
 {
-	color: white;
+	color: #006699;
 	margin: 0;
 	line-height: 45px;
 	font-size: 1.3em;
 }
 
-#devHolder ul li
-{
-	float: left;
-	border-bottom: thin solid white;
-}
-
-#devHolder ul li:nth-child(7)
-{
-	border:none;
-}
-
-#devHolder ul li:last-child
-{
-	border: none;
-}
-
-#devHolder img
-{
-	border-radius: 10px;
-	border: 2px solid #ffcc00;
-}
-
 .NUM
 {
-	font-size: 2em;
-	color: #ffcc00;
+	display: block;
+	font-weight: bold;
+	color: #006699;
+	font-size: 25em;
+	margin-bottom: 10px;
 }
 
 #features
@@ -170,16 +163,15 @@ img
 
 #features h2
 {
-	padding: 1% 0;
-	font-size: 1.6em;
+	padding: 1.5% 0;
 	background-color: #ffcc00;
 	color: #006699;
+	margin-bottom: 10px;
 }
 
 #features ul li
 {
-	padding: 1.5% 0;
-	font-size: 1.2em;
+	padding: 3% 0;
 	color: #006699;
 	border-bottom: thin solid #ccc;
 }
@@ -216,6 +208,16 @@ img
 	margin-top: 10px;
 }
 
+.bold
+{
+	color: #006699;
+	font-weight: bold;
+}
+
+.EX
+{
+	display: block;
+}
 
 
 
@@ -227,7 +229,7 @@ img
 
 	#devHolder div
 	{
-		border-radius: 0!important;
+	  border-radius: 5px;
 	}
 
 	#homeCard p
@@ -244,10 +246,10 @@ img
 	{
 		padding: 2% 0;
 	}
-
+	
 	#features ul li
 	{
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 
 	#devHolder p
@@ -286,6 +288,39 @@ img
 
 }
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-
+/*My Phone*/
+@media only screen and (max-width: 240px) {
+#myImg
+	{
+		display: block;
+		width: 70%;
+		margin: auto;
+		margin-bottom: 10px;
+	}
 }
+
+/*Android*/
+@media only screen and (min-width:241px) and  (max-width: 266px) {
+#myImg
+	{
+		display: block;
+		width: 70%;
+		margin: auto;
+		margin-bottom: 10px;
+	}
+}
+
+/*iPhone4*/
+@media only screen and (min-width: 267px) and (max-width: 320px) {
+  #myImg
+	{
+		display: block;
+		width: 70%;
+		margin: auto;
+		margin-bottom: 10px;
+	}
+}
+
+
+
+

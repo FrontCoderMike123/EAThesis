@@ -11,20 +11,22 @@
 		  <div class="item item-avatar" id="developerTop">
    			<img data-ng-src="{{meTH}}" alt="Michel Beaubien">
     		<h2>Michel Beaubien</h2>
-    		<p>Front End Developer</p>
+    		<p>Web / Mobile Developer</p>
   		</div>
 
   		<div class="item item-body row responsive-md" id="devHolder">
-  			<div class="col col-25">
-          <img data-ng-src="{{meLG}}" alt="Michel Beaubien">
-        </div>
-        <div class="col col-75">
-          <ul>
-            <li data-ng-repeat="list in lists" class="col col-50">
-              <p><span class="NUM">{{list.num}}</span> {{list.plan}}</p>
-            </li>
-          </ul>
-        </div>
+          <img id="myImg" data-ng-src="{{meLG}}" alt="Michel Beaubien">
+          <ion-slide-box on-slide-changed="slideHasChanged($index)" id="myList">
+          <ion-slide data-ng-repeat="list in lists">
+            <div class="box item-text-wrap">
+              <span class="NUM">{{list.num}}</span>
+                <object data-ng-data="{{list.SVG}}">
+                  <img data-ng-src="{{list.PNG}}" alt="List Item">
+                </object>
+              <p>{{list.plan}}</p>
+            </div>
+          </ion-slide>
+          </ion-slide-box>
   		</div>
 
   		<div class="item item-divider item-text-wrap" id="responsiveText">
